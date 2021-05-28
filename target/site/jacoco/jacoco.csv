@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+tdd-sistema-bancario,com.jhssantiago.tdd.sistema.bancario.model,Cliente,54,0,2,0,17,0,9,0,8,0
+tdd-sistema-bancario,com.jhssantiago.tdd.sistema.bancario.model,Movimentacao,51,0,2,0,20,0,12,0,11,0
+tdd-sistema-bancario,com.jhssantiago.tdd.sistema.bancario.model,Conta,43,10,0,0,21,5,16,3,16,3
+tdd-sistema-bancario,com.jhssantiago.tdd.sistema.bancario.model,Util,55,0,4,0,9,0,4,0,2,0
+tdd-sistema-bancario,com.jhssantiago.tdd.sistema.bancario.model,Agencia,13,0,0,0,6,0,5,0,5,0
+tdd-sistema-bancario,com.jhssantiago.tdd.sistema.bancario.model,Banco,27,0,0,0,12,0,9,0,9,0

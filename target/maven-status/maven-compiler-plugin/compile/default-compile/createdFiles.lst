@@ -1,0 +1,7 @@
+com\jhssantiago\tdd\sistema\bancario\model\Movimentacao.class
+com\jhssantiago\tdd\sistema\bancario\model\Agencia.class
+com\jhssantiago\tdd\sistema\bancario\model\Util.class
+com\jhssantiago\tdd\sistema\bancario\model\Cliente.class
+com\jhssantiago\tdd\sistema\bancario\model\Conta.class
+com\jhssantiago\tdd\sistema\bancario\model\Banco.class
+com\jhssantiago\tdd\sistema\bancario\model\Cadastro.class
