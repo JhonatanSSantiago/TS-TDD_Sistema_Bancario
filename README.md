@@ -33,3 +33,4 @@ você deverá renomear as pastas para algo como (preferencialmente evitando acen
 
 `/home/usuario/meus-projetos/projeto-incrivel`.
 
+![Relatorio](relatorio.png)

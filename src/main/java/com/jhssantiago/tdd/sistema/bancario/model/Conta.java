@@ -98,10 +98,11 @@ public class Conta implements Cadastro {
      */
     public void addMovimentacao(Movimentacao movimentacao) {
         if(movimentacao.isConfirmada()){
-            if(movimentacao.getTipo() == 'C')
+            if(movimentacao.getTipo() == 'C'){
                 saldo += movimentacao.getValor();
-            else if(movimentacao.getTipo() == 'D')
+            }else if(movimentacao.getTipo() == 'D'){
                 saldo -= movimentacao.getValor();
+            }    
         }
 
     }
@@ -134,12 +135,12 @@ public class Conta implements Cadastro {
      * @param valor valor a ser sacado (deve ser um valor positivo)
      */
     public void saque(final double valor) {
-        Movimentacao movimentacao = new Movimentacao(this);
+      /*  Movimentacao movimentacao = new Movimentacao(this);
         movimentacao.setConfirmada(true);
         movimentacao.setTipo('D');
         movimentacao.setValor(valor);
         saldo -= valor;
-        movimentacoes.add(movimentacao);
+        movimentacoes.add(movimentacao); */
     }
 
     /**

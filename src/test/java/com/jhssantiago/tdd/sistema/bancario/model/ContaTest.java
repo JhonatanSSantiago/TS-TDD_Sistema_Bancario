@@ -13,11 +13,6 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class ContaTest {
     
-    @Test
-    void testAddMovimentacao() {
-        //TODO: Você precisa implementar este teste
-    }
-
     /* Testes do R1 */
 
     @Test
@@ -164,4 +159,16 @@ public class ContaTest {
         assertThrows(IllegalArgumentException.class, () -> instance.depositoDinheiro(deposito));      
     }
 
+    @Test
+    void testAddMovimentacaoDebito() {
+        Conta instance = new Conta();
+        Movimentacao mv = new Movimentacao(instance);
+        mv.setConfirmada(true);
+        mv.setTipo('D');
+        final double valor = 100.50;
+        final double esperado = -valor;
+        mv.setValor(valor);
+        instance.addMovimentacao(mv);
+        assertEquals(esperado, instance.getSaldoTotal());
+    }
 }
