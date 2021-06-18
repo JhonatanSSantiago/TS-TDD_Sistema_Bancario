@@ -1,4 +1,4 @@
-# TS-TDD Sistema Bancário
+# TS-TDD Sistema Bancário ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/JhonatanSSantiago/TS-TDD_Sistema_Bancario/Maven?style=flat-square)
 
 Vídeo:[🧪⚙️☕️ #1 TDD com JUNIT 5 no VS CODE: Implementando Regras de Negócio em JAVA pra um Sistema Bancário](https://youtu.be/isOY-qG5bxU)
 
