@@ -1,4 +1,4 @@
-# TS-TDD_Sistema_Bancario
+# TS-TDD Sistema Bancário
 
 Vídeo:[🧪⚙️☕️ #1 TDD com JUNIT 5 no VS CODE: Implementando Regras de Negócio em JAVA pra um Sistema Bancário](https://youtu.be/isOY-qG5bxU)
 
@@ -31,6 +31,6 @@ Alguns conceitos relacionados a testes de software são mostrados nas apresenta�
 
 você deverá renomear as pastas para algo como (preferencialmente evitando acentos) 
 
-`/home/usuario/meus-projetos/projeto-incrivel`.
+`/home/usuario/meus-projetos/projeto-incrivel`
 
 ![Relatorio](relatorio.png)
