@@ -5,6 +5,7 @@
  */
 package com.jhssantiago.tdd.sistema.bancario.model;
 
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
