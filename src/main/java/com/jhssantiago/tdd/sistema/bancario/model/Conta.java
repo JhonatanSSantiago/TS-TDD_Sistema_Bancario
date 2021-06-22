@@ -135,12 +135,17 @@ public class Conta implements Cadastro {
      * @param valor valor a ser sacado (deve ser um valor positivo)
      */
     public void saque(final double valor) {
-      /*  Movimentacao movimentacao = new Movimentacao(this);
-        movimentacao.setConfirmada(true);
+        if (valor < 0) {
+            throw new IllegalArgumentException("Valor de saque não pode ser negativo");
+        }
+        if (valor > getSaldoTotal()) {
+            throw new IllegalArgumentException("Saldo insuficiente");
+        }
+        Movimentacao movimentacao = new Movimentacao(this);
         movimentacao.setTipo('D');
         movimentacao.setValor(valor);
         saldo -= valor;
-        movimentacoes.add(movimentacao); */
+        movimentacoes.add(movimentacao);
     }
 
     /**
@@ -156,7 +161,6 @@ public class Conta implements Cadastro {
             throw new IllegalArgumentException("Valor de deposito nao pode ser negativo");
         }
         Movimentacao movimentacao = new Movimentacao(this);
-        movimentacao.setConfirmada(true);
         movimentacao.setTipo('C');
         movimentacao.setValor(valor);
         saldo += valor;
@@ -170,7 +174,16 @@ public class Conta implements Cadastro {
      * @param valor valor a ser depositado (deve ser um valor positivo)
      */
     public void depositoCheque(final double valor) {
-        // TODO: Você precisa implementar este método
+         if (valor < 0) {
+            throw new IllegalArgumentException("Valor de deposito não pode ser negativo");
+        }
+        Movimentacao movimentacao = new Movimentacao(this);
+        movimentacao.setConfirmada(false);
+        movimentacao.setTipo('C');
+        movimentacao.setValor(valor);
+        saldo += valor;
+        movimentacoes.add(movimentacao);
+
     }
 
     @Override
