@@ -113,7 +113,7 @@ public class Movimentacao implements Cadastro {
         if (valor < 0) {
             throw new IllegalArgumentException("Valor de deposito não pode ser negativo");
         }
-
+        this.valor = valor;
     }
 
     public boolean isConfirmada() {
