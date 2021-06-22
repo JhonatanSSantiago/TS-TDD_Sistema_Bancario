@@ -70,4 +70,63 @@ public class MovimentacaoTest {
         assertThrows(IllegalArgumentException.class, () -> instance.setDescricao(espacosEmBranco));
     }
 
+    @Test
+    void testR1TipoMovimentacaoCredito() {
+        final Conta instance = new Conta();
+        instance.depositoDinheiro(500);
+        final List<Movimentacao> movimentacaoList = instance.getMovimentacoes();
+        final Movimentacao mv = movimentacaoList.get(0);
+        final char esperado = 'C';
+        final char obtido = mv.getTipo();
+        assertEquals(esperado, obtido);
+    }
+
+    @Test
+    void testR1TipoMovimentacaoDebito() {
+        final Conta instance = new Conta();
+        instance.depositoDinheiro(600);
+        instance.saque(500);
+        final List<Movimentacao> movimentacaoList = instance.getMovimentacoes();
+        final Movimentacao mv = movimentacaoList.get(1);
+        final char esperado = 'D';
+        final char obtido = mv.getTipo();
+        assertEquals(esperado, obtido);
+    }
+
+    @Test
+    void testR02ValorCreditoNegativo() {
+        Conta instance = new Conta();
+        assertThrows(IllegalArgumentException.class, () -> instance.depositoDinheiro(-500));
+    }
+
+    @Test
+    void test03SaqueMaiorQueSaldo() {
+        Conta instance = new Conta();
+        instance.depositoDinheiro(500);
+        assertThrows(IllegalArgumentException.class, () -> instance.saque(600));
+    }
+
+    @Test
+    void test04DepositoConfirmado() {
+        Conta instance = new Conta();
+        instance.depositoDinheiro(500);
+        final List<Movimentacao> movimentacaoList = instance.getMovimentacoes();
+        final Movimentacao mv = movimentacaoList.get(0);
+        final boolean esperado = true;
+        final boolean obtido = mv.isConfirmada();
+        assertEquals(esperado, obtido);
+    }
+    
+    @Test
+    void test04SaqueConfirmado() {
+        Conta instance = new Conta();
+        instance.depositoDinheiro(500);
+        instance.depositoDinheiro(400);
+        final List<Movimentacao> movimentacaoList = instance.getMovimentacoes();
+        final Movimentacao mv = movimentacaoList.get(1);
+        final boolean esperado = true;
+        final boolean obtido = mv.isConfirmada();
+        assertEquals(esperado, obtido);
+    }
+
 }
