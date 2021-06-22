@@ -71,7 +71,7 @@ public class Movimentacao implements Cadastro {
      * @param conta a {@link Conta} para vincular a movimentação.
      */
     public Movimentacao(Conta conta){
-        // TODO: Você precisa implementar este método
+        setConfirmada(true);
     }
 
     @Override
@@ -110,7 +110,10 @@ public class Movimentacao implements Cadastro {
     }
 
     public void setValor(double valor) {
-        this.valor = valor;
+        if (valor < 0) {
+            throw new IllegalArgumentException("Valor de deposito não pode ser negativo");
+        }
+
     }
 
     public boolean isConfirmada() {
