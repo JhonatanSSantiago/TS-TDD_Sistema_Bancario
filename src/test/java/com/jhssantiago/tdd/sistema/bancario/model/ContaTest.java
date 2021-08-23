@@ -42,7 +42,7 @@ public class ContaTest {
     /* Testes do R2 */
 
     @Test 
-    void testInstanciaPadraoPoupanca(){
+    void testinstanciaPadraoContaCorrente(){
         final Conta instance = new Conta();
         assertFalse(instance.isPoupanca());
     }
